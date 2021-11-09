@@ -28,7 +28,8 @@ const Auth = () => {
 
         const { username, password, phoneNumber, avatarURL } = form;
 
-        const URL = 'https://medical-pager-2021.herokuapp.com/auth';
+        const URL = 'https://messenger-app-2021.herokuapp.com/auth';
+
 
         //post all the data to the back-end then get some data back from the back-end
         const { data: { token, userId, fullName, hashedPassword }} = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, { username, password, fullName: form.fullName, phoneNumber, avatarURL })
